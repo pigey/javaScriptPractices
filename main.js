@@ -9,7 +9,7 @@ function myFunction(){
         document.getElementById("test").innerHTML = "Hello World!"
     }
 }
-hello.addEventListener("click", myFunction)
+
 //MDN for documantation!
 console.log("main.js file")
 
@@ -20,14 +20,12 @@ var confirmPasswordInput = document.getElementById("confirmPassword");
 
 function validateNameInput(event){
     var nameInputValue = event.target.value;
-    console.log("value: ", nameInputValue);
-
     if (nameInputValue == "") return;
 
     if (nameInputValue.length < 2) {
         document.getElementById("name-error").innerHTML = "Name should be more than 2 characters"
     }
-    if (nameInputValue.length > 12) {
+    else if (nameInputValue.length > 12) {
         document.getElementById("name-error").innerHTML = "Name should be less than 12 characters"
     }
     else{
@@ -67,9 +65,7 @@ function validatePassWordConfirmation(event){
 
 
 nameInput.addEventListener("blur", validateNameInput);
-nameInput.addEventListener("focus", validateNameInput);
-
 passwordInput.addEventListener("blur", validatePasswordInput);
-
 confirmPasswordInput.addEventListener("blur", validatePassWordConfirmation);
+hello.addEventListener("click", myFunction);
 
