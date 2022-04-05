@@ -23,10 +23,10 @@ function validateNameInput(event){
     if (nameInputValue == "") return;
 
     if (nameInputValue.length < 2) {
-        document.getElementById("name-error").innerHTML = "Name should be more than 2 characters"
+        document.getElementById("name-error").innerHTML = "Name should be more than 2 characters!"
     }
     else if (nameInputValue.length > 12) {
-        document.getElementById("name-error").innerHTML = "Name should be less than 12 characters"
+        document.getElementById("name-error").innerHTML = "Name should be less than 12 characters!"
     }
     else{
         document.getElementById("name-error").innerHTML = ""
